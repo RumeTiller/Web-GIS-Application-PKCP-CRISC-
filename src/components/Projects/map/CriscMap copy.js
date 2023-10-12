@@ -26,8 +26,8 @@ const CriscMap = ({ mapData }) => {
   const pname = useParams().id
   // console.log("hello crisc")
   // console.log(mapData);
-  const location = myContext.sbData.location;
-
+  // const location = myContext.sbData.location;
+  const location = 'sirajganj';
   let viewProps;
   /*  ***************All Base Layers***************** */
 
@@ -92,9 +92,9 @@ const CriscMap = ({ mapData }) => {
     element.style.display = 'none'
   }
   useEffect(() => {
-
+    
     viewProps = new View({
-      zoom: 14,
+      //  zoom: 13.5,
       projection: 'EPSG:4326',
       maxZoom: 21,
     });
@@ -489,7 +489,7 @@ function myFunction() {
                 olmap.addOverlay(overlay);
               }
             } else {
-              olmap.removeOverlay(overlay);
+              olmap.removeOverlay(overlay); 
             }
           });
       }
